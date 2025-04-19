@@ -7,6 +7,7 @@ import styles from '../components/TeamResponsible.module.css';
 import team_photo1 from '../components/images/team_photo 1.jpg'
 import team_photo2 from '../components/images/team_photo 2.jpg'
 import team_photo3 from '../components/images/team_photo 3.jpg'
+import JokeComponent from "./JokeComponent.jsx";
 
 function SecondMainSection() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -84,6 +85,7 @@ function SecondMainSection() {
                     </button>
                 ))}
             </div>
+            <JokeComponent/>
             <section className="ourTeam">
                 <div className={styles.teamContainer}>
                   <span className={styles.teamTitle}>
