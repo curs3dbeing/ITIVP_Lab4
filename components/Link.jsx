@@ -243,11 +243,6 @@ function Link() {
         const trimmedCountry = trim(userInputCountry);
         const trimmedMessage = trim(userInputMessage);
 
-        if (!checkEmailExists(trimmedEmail)) {
-            setErrorMessage('От данного адреса электронной почты уже существует письмо')
-            return;
-        }
-
         if (!trimmedName || !trimmedEmail || !trimmedCountry || !trimmedMessage) {
             setErrorMessage('Пожалуйста, заполните все поля.');
             return;
@@ -255,6 +250,11 @@ function Link() {
 
         if (!emailRegex.test(trimmedEmail)) {
             setErrorMessage('Введите реальную почту');
+            return;
+        }
+
+        if (!checkEmailExists(trimmedEmail)) {
+            setErrorMessage('От данного адреса электронной почты уже существует письмо')
             return;
         }
 

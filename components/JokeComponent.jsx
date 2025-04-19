@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './JokeComponent.css'
 
 const JokeComponent = () => {
     const [joke, setJoke] = useState('');
@@ -10,7 +11,6 @@ const JokeComponent = () => {
         const currentTime = Date.now();
         const timeSinceLastRequest = (currentTime - lastRequestTime) / 1000;
 
-        // Проверяем, прошло ли 10 секунд с последнего запроса
         if (timeSinceLastRequest < 10 && lastRequestTime !== 0) {
             setError(`Шутку можно запрашивать раз в 10 секунд. Подождите еще ${Math.ceil(10 - timeSinceLastRequest)} сек.`);
             return;
@@ -63,7 +63,7 @@ const JokeComponent = () => {
             </button>
 
             {joke && (
-                <div style={{ marginTop: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '4px' }}>
+                <div style={{ marginTop: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '4px', color: 'White', fontSize: '20px'}}>
                     <p>{joke}</p>
                 </div>
             )}
