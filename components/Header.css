@@ -1,0 +1,105 @@
+.headerMenuPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.headerLogo {
+    margin-right: 2rem;
+    width: 5%;
+    height: auto;
+}
+
+.headerMenuItem {
+    font-family: "MontserratBold", sans-serif;
+    font-size: clamp(1.5rem,2vw, 5vh);
+    margin-right: 1.2vw;
+}
+
+.headerMenuItem:hover {
+    color: rgba(166, 122, 253, 1);
+}
+
+.mobile_header {
+    display: none;
+}
+.mobile_navbar {
+    display: none;
+}
+
+#menu {
+    position: absolute;
+    top: 5vh;
+    display: flex;
+    list-style: none;
+}
+
+#menu.hidden {
+    display: none;
+}
+
+.headerLoginPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.headerLoginBtn {
+    min-width:170px;
+    font-family: "MontserratBold", sans-serif;
+    font-size: clamp(1.2rem,2vw, 2vh);
+    border-radius: 0.5rem;
+    border: 0.15rem solid rgba(166, 122, 253, 1);
+    color: rgba(166, 122, 253, 1);
+    background-color: transparent;
+    margin-right: 2rem;
+    width: 30%;
+    height: 60%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.headerLoginBtn:hover {
+    background-color: rgba(166, 122, 253, 1);
+    color: white;
+}
+
+.headerSignUpBtn {
+    font-family: "MontserratBold", sans-serif;
+    position: relative;
+    font-size: clamp(1rem,4vw, 1vw);
+    background: linear-gradient(to right, rgba(135, 80, 243, 1), rgba(137, 162, 251, 1), rgba(94, 211, 208, 1));
+    color: white;
+    border: none;
+    min-width:200px;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+    width: 30%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.headerSignUpBtn::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: 'Зарегистрируйтесь';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(135, 80, 243, 1), rgba(168, 123, 255, 1));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.headerSignUpBtn:hover::before {
+    opacity: 1;
+}

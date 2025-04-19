@@ -1,0 +1,26 @@
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.productsFooter, .legalFooter, .appFooter {
+    color: white;
+    font-family: "MontserratBold", sans-serif;
+    font-size: clamp(1rem,2vh,2vw);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 3%;
+}
+.footerLinks {
+    clamp(1rem,2vh,2vw);
+    margin-top: 10px;
+}
+
+.footerCopyright {
+    min-height: 7vh;
+    display: flex;
+    justify-content: center;
+    font-family: "MontserratBold", sans-serif;
+    color: gray;
+}

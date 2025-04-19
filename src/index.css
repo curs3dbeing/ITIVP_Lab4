@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../fonts/static/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(180, 183, 255, 0),rgba(180, 183, 255, 1),rgba(180, 183, 255, 0));
+}
+
+body {
+  background: rgba(34, 31, 44, 1);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgba(34, 31, 44, 0),rgba(34, 31, 44, 1),rgba(34, 31, 44, 1),rgba(34, 31, 44, 1),rgba(34, 31, 44, 0));
+  display: flex;
+  user-select: none;
+  color: white;
+  z-index: 1000;
+}
